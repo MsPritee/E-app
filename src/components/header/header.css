@@ -17,13 +17,14 @@ header .headerSearch {
 }
 
 header .headerSearch .selectDropWrapper {
-  width: 18%;
+  width: max-content;
+  padding-right: 30px;
   font-size: 16px;
   font-weight: 500;
   position: relative;
 }
 
-header .headerSearch .selectDropWrapper::after {
+header .headerSearch .selectDropWrapper:after {
     content: "";
   width: 1px;
   height: 30px;

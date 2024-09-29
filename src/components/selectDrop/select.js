@@ -3,7 +3,7 @@ import "./select.css";
 
 const Select = () => {
   return (
-    <div className="selectDrop">
+    <div className="selectDropWrapper">
       <div className="selectDrop cursor position-relative">
         <span className="openSelect">All Categories</span>
       </div>

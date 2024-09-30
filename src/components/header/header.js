@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.css";
 import Logo from "../../assets/images/logo.png";
 import SearchIcon from "@mui/icons-material/Search";
 import Select from "../selectDrop/select";
 
 const Header = () => {
+  const [categories, setCategories] = useState([
+    "All Categories",
+    "Milks and Daries",
+    "Wines & Drinks",
+    "Food and Toy",
+    "Fast Food",
+    "Baking material",
+    "Vegitables",
+    "Cloths",
+    "Fresh Fruits",
+    "Bread and Juice",
+    "Baby product",
+    "Groceries",
+    "Beauty",
+    "Footwear",
+    "Electronics",
+  ]);
+
   return (
     <>
       <header>
@@ -18,7 +36,7 @@ const Header = () => {
               <div className="headerSearch d-flex align-items-center">
                 <div className="selectDrop cursor position-relative">
                   All Categories
-                  <Select />
+                  <Select data={categories} />
                 </div>
                 <div className="search">
                   <input type="text" placeholder="Search for items..." />

@@ -50,6 +50,9 @@ const Select = (data, placeholder, icon, view, selectedSelectBoxItem) => {
     setListData(list2);
   };
 
+  console.log("Data:", data, "Type:", typeof data);
+  console.log("ListData:", listData, "Type:", typeof listData);
+
   return (
     <ClickAwayListener onClickAway={() => setIsOpenSelect(false)}>
       <div className="selectDropWrapper cursor position-relative">
@@ -74,68 +77,28 @@ const Select = (data, placeholder, icon, view, selectedSelectBoxItem) => {
                 onClick={() => closeSelect(0, placeholder, "")}
                 className={`${selectedIndex === 0 ? "active" : ""}`}
               >
-                {placeholder}
+                {placeholder} hi
               </li>
-              <li
-                onClick={() => closeSelect(1)}
-                className={`${selectedIndex === 1 ? "active" : ""}`}
-              >
-                Wines & Drinks
-              </li>
-              <li
-                onClick={() => closeSelect(2)}
-                className={`${selectedIndex === 2 ? "active" : ""}`}
-              >
-                Clothing & Beauty
-              </li>
-              <li
-                onClick={() => closeSelect(3)}
-                className={`${selectedIndex === 3 ? "active" : ""}`}
-              >
-                Fresh Seafood
-              </li>
-              <li
-                onClick={() => closeSelect(4)}
-                className={`${selectedIndex === 4 ? "active" : ""}`}
-              >
-                Pet Food
-              </li>
-              <li
-                onClick={() => closeSelect(5)}
-                className={`${selectedIndex === 5 ? "active" : ""}`}
-              >
-                Fast Food
-              </li>
-              <li
-                onClick={() => closeSelect(6)}
-                className={`${selectedIndex === 6 ? "active" : ""}`}
-              >
-                Baking material
-              </li>
-              <li
-                onClick={() => closeSelect(7)}
-                className={`${selectedIndex === 7 ? "active" : ""}`}
-              >
-                Vegitables
-              </li>
-              <li
-                onClick={() => closeSelect(8)}
-                className={`${selectedIndex === 8 ? "active" : ""}`}
-              >
-                Fresh Fruits
-              </li>
-              <li
-                onClick={() => closeSelect(9)}
-                className={`${selectedIndex === 9 ? "active" : ""}`}
-              >
-                Bread & Juice
-              </li>
-              <li
-                onClick={() => closeSelect(10)}
-                className={`${selectedIndex === 10 ? "active" : ""}`}
-              >
-                Milks and Diaries
-              </li>
+              {Array.isArray(listData) &&
+                listData.map((item, index) => {
+                  return (
+                    <li
+                      key={index + 1}
+                      onClick={() =>
+                        closeSelect(
+                          index + 1,
+                          view !== "cat" ? item : item?.name,
+                          item?._id
+                        )
+                      }
+                      className={`${
+                        selectedIndex === index + 1 ? "active" : ""
+                      }`}
+                    >
+                      {view !== "cat" ? item : item?.name}
+                    </li>
+                  );
+                })}
             </ul>
           </div>
         )}

@@ -5,22 +5,35 @@ header {
   padding: 10px 0px;
 }
 
-header .part1 .logo{width:150px; height: auto !important;}
+header .part1 .logo {
+  width: 150px;
+  height: auto !important;
+}
 /* 
 header img{
     size: 50%;
 } */
 
-.headerWrapper{transition: all 0.3s ease-in-out; background: #fff; position: fixed; top: 0px; left: 0px; width: 100%; z-index: 1000;}
+.headerWrapper {
+  transition: all 0.3s ease-in-out;
+  background: #fff;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 1000;
+}
 
-.headerWrapper.fixed{ top: -66px;  }
+.headerWrapper.fixed {
+  top: -66px;
+}
 
 header .headerSearch {
   width: 100%;
   height: 45px;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 10px 15px;
-  border-radius: 4px; 
+  border-radius: 4px;
 }
 
 header .headerSearch .selectDropWrapper {
@@ -32,35 +45,48 @@ header .headerSearch .selectDropWrapper {
 }
 
 header .headerSearch .selectDropWrapper:after {
-    content: "";
+  content: "";
   width: 1px;
   height: 30px;
   position: absolute;
-  background: rgba(0,0,0,0.3);
-  top: 0px;
+  background: rgba(0, 0, 0, 0.3);
+  top: 5px;
   right: 0px;
 }
 
-.selectDropWrapper svg{color: #000 !important; opacity: 0.7 !important;}
+.selectDropWrapper svg {
+  color: #000 !important;
+  opacity: 0.7 !important;
+}
 
 header .headerSearch .search {
-  width: 82%;
-  padding-left: 30px;
+  width: 100%;
+  padding-left: 5px;
   position: relative;
 }
 
 header .headerSearch .search input {
   width: 100%;
-  height: 50px;
-  border: 0px; 
+  height: 38px;
+  border: 0px;
   outline: none !important;
-  font-size: 18px;
+  font-size: 14px;
+  background: none !important;
+  color: rgba(0, 0, 0, 0.8);
 }
 
-header .headerSearch .search .searchIcon{
+header .headerSearch .search input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.8);
+}
+header .headerSearch .search input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+header .headerSearch .search .searchIcon {
   position: absolute;
-  top: 12px;
+  top: 9px;
   right: 0px;
-  opacity: 0.5;
-  font-size: 30px !important;
+  /* opacity: 0.5; */
+  font-size: 23px !important;
+  color: rgba(0, 0, 0, 0.8);
 }

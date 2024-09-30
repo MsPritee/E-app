@@ -73,7 +73,7 @@ const Select = ({ data, placeholder, icon, view, selectedSelectBoxItem }) => {
             </div>
             <ul className="searchResults">
               <li
-                onClick={() => closeSelect(0, placeholder)}
+                onClick={() => closeSelect(0, placeholder, "")}
                 className={`${selectedIndex === 0 ? "active" : ""}`}
               >
                 {placeholder}

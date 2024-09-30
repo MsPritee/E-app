@@ -3,6 +3,7 @@ import "./header.css";
 import Logo from "../../assets/images/logo.png";
 import SearchIcon from "@mui/icons-material/Search";
 import Select from "../selectDrop/select";
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 
 const Header = () => {
   const [categories, setCategories] = useState([
@@ -23,6 +24,15 @@ const Header = () => {
     "Electronics",
   ]);
 
+  const selectedSelectBoxItem = (name, id) => {
+    if (name === "Your Location") {
+      localStorage.setItem("location", "All");
+    } else {
+      localStorage.setItem("location", name);
+    }
+    window.location.href = window.location.href;
+  };
+
   return (
     <>
       <header>
@@ -36,7 +46,13 @@ const Header = () => {
               <div className="headerSearch d-flex align-items-center">
                 <div className="selectDrop cursor position-relative">
                   All Categories
-                  <Select data={categories} />
+                  <Select
+                    data={categories}
+                    placeholder={"All Categories"}
+                    icon={false}
+                    selectedSelectBoxItem={selectedSelectBoxItem}
+                    view="category"
+                  />
                 </div>
                 <div className="search">
                   <input type="text" placeholder="Search for items..." />

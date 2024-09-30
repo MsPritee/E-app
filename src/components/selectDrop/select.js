@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./select.css";
 import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
 import { ClickAwayListener } from "@mui/material";
+import { FamilyRestroomTwoTone } from "@mui/icons-material";
 
-const Select = (data, placeholder, icon, view, selectedSelectBoxItem) => {
+const Select = ({ data, placeholder, icon, view, selectedSelectBoxItem }) => {
   const [isOpenSelect, setIsOpenSelect] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [selectedItem, setSelectedItem] = useState("");
@@ -25,7 +26,7 @@ const Select = (data, placeholder, icon, view, selectedSelectBoxItem) => {
 
   useEffect(() => {
     setSelectedItem(localStorage.getItem("location"));
-    setSelectedIndex(parseInt(localStorage.getItem("locationTableIndex")));
+    setSelectedIndex(parseInt(localStorage.getItem("locationTabIndex")));
   }, [selectedItem, selectedIndex]);
 
   const closeSelect = (index, name, id) => {
@@ -38,6 +39,7 @@ const Select = (data, placeholder, icon, view, selectedSelectBoxItem) => {
 
   const filterList = (e) => {
     const keyword = e.target.value.toLowerCase();
+    console.log(keyword);
 
     const list = listData2.filter((item) => {
       return view === "cat"
@@ -49,9 +51,6 @@ const Select = (data, placeholder, icon, view, selectedSelectBoxItem) => {
 
     setListData(list2);
   };
-
-  console.log("Data:", data, "Type:", typeof data);
-  console.log("ListData:", listData, "Type:", typeof listData);
 
   return (
     <ClickAwayListener onClickAway={() => setIsOpenSelect(false)}>
@@ -74,31 +73,28 @@ const Select = (data, placeholder, icon, view, selectedSelectBoxItem) => {
             </div>
             <ul className="searchResults">
               <li
-                onClick={() => closeSelect(0, placeholder, "")}
+                onClick={() => closeSelect(0, placeholder)}
                 className={`${selectedIndex === 0 ? "active" : ""}`}
               >
-                {placeholder} hi
+                {placeholder}
               </li>
-              {Array.isArray(listData) &&
-                listData.map((item, index) => {
-                  return (
-                    <li
-                      key={index + 1}
-                      onClick={() =>
-                        closeSelect(
-                          index + 1,
-                          view !== "cat" ? item : item?.name,
-                          item?._id
-                        )
-                      }
-                      className={`${
-                        selectedIndex === index + 1 ? "active" : ""
-                      }`}
-                    >
-                      {view !== "cat" ? item : item?.name}
-                    </li>
-                  );
-                })}
+              {listData.map((item, index) => {
+                return (
+                  <li
+                    key={index + 1}
+                    onClick={() =>
+                      closeSelect(
+                        index + 1,
+                        view !== "cat" ? item : item?.name,
+                        item?._id
+                      )
+                    }
+                    className={`${selectedIndex === index + 1 ? "active" : ""}`}
+                  >
+                    {view !== "cat" ? item : item?.name}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         )}

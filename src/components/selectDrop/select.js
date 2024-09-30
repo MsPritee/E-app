@@ -73,10 +73,12 @@ const Select = ({ data, placeholder, icon, view, selectedSelectBoxItem }) => {
             </div>
             <ul className="searchResults">
               <li
+                key={0}
                 onClick={() => closeSelect(0, placeholder, "")}
                 className={`${selectedIndex === 0 ? "active" : ""}`}
               >
-                {placeholder}
+                All categories
+                {/* {placeholder} */}
               </li>
               {listData.map((item, index) => {
                 return (

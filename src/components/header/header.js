@@ -1,12 +1,12 @@
-import React, { useContext, useEffect, useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState, useRef } from "react";
+// import { Link } from "react-router-dom";
 import "./header.css";
 import Logo from "../../assets/images/logo.png";
 import SearchIcon from "@mui/icons-material/Search";
 import Select from "../selectDrop/select";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-import { ClickAwayListener } from "@mui/base/ClickAwayListener";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import ClickAwayListener from "@mui/material/ClickAwayListener";
 import Button from "@mui/material/Button";
 import Person2OutlinedIcon from "@mui/icons-material/Person2Outlined";
 import VerifiedIcon from "@mui/icons-material/Verified";
@@ -22,7 +22,7 @@ const Header = () => {
   const [isOpenAccDropDown, setisOpenAccDropDown] = useState(false);
 
   // const context = useContext(MyContext);
-  const history = useNavigate();
+  // const history = useNavigate();
 
   const headerRef = useRef();
 
@@ -59,9 +59,9 @@ const Header = () => {
     getCountry("https://countriesnow.space/api/v0.1/countries/");
   }, []);
 
-  useEffect(() => {
-    setCategories(context.categories);
-  }, [context.categories]);
+  // useEffect(() => {
+  //   setCategories(context.categories);
+  // }, [context.categories]);
 
   const getCountry = async (url) => {
     try {
@@ -138,89 +138,79 @@ const Header = () => {
                 <ClickAwayListener onClickAway={() => setisOpenDropDown(false)}>
                   <ul className="list list-inline mb-0 headerTabs">
                     <li className="list-inline-item">
-                      <Link to="/myList">
-                        <span>
-                          <FavoriteBorderOutlinedIcon />
-                          <span className="badge bg-success rounded-circle">
-                            {context?.myListData?.length}
-                          </span>
-                          Wishlist
+                      {/* <Link to="/myList"> */}
+                      <span>
+                        <FavoriteBorderOutlinedIcon />
+                        <span className="badge bg-success rounded-circle">
+                          {/* {context?.myListData?.length} */}myList
                         </span>
-                      </Link>
+                        Wishlist
+                      </span>
+                      {/* </Link> */}
                     </li>
                     <li className="list-inline-item">
                       <span>
-                        <Link to={"/cart"}>
-                          <ShoppingCartOutlinedIcon />
-                          <span className="badge bg-success rounded-circle">
-                            {context.cartItems.length}
-                          </span>
-                          Cart
-                        </Link>
+                        {/* <Link to={"/cart"}> */}
+                        <ShoppingCartOutlinedIcon />
+                        <span className="badge bg-success rounded-circle">
+                          {/* {context.cartItems.length} */}cartItems
+                        </span>
+                        Cart
+                        {/* </Link> */}
                       </span>
                     </li>
 
-                    {context.isLogin === true ? (
-                      <li className="list-inline-item">
-                        <span
-                          onClick={() => setisOpenDropDown(!isOpenDropDown)}
-                        >
-                          <Person2OutlinedIcon />
-                          Account
-                        </span>
+                    <li className="list-inline-item">
+                      <span onClick={() => setisOpenDropDown(!isOpenDropDown)}>
+                        <Person2OutlinedIcon />
+                        Account
+                      </span>
 
-                        {isOpenDropDown !== false && (
-                          <ul className="dropdownMenu">
-                            <li>
-                              <Link to="/my-account">
-                                <Button
-                                  className="align-items-center"
-                                  onClick={() =>
-                                    setisOpenDropDown(!isOpenDropDown)
-                                  }
-                                >
-                                  <Person2OutlinedIcon /> My Account
-                                </Button>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/orders">
-                                <Button
-                                  onClick={() =>
-                                    setisOpenDropDown(!isOpenDropDown)
-                                  }
-                                >
-                                  <VerifiedIcon /> Orders
-                                </Button>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/myList">
-                                <Button
-                                  onClick={() =>
-                                    setisOpenDropDown(!isOpenDropDown)
-                                  }
-                                >
-                                  <FavoriteBorderOutlinedIcon /> My Wishlist
-                                </Button>
-                              </Link>
-                            </li>
+                      {isOpenDropDown !== false && (
+                        <ul className="dropdownMenu">
+                          <li>
+                            {/* <Link to="/my-account"> */}
+                            <Button
+                              className="align-items-center"
+                              onClick={() => setisOpenDropDown(!isOpenDropDown)}
+                            >
+                              <Person2OutlinedIcon /> My Account
+                            </Button>
+                            {/* </Link> */}
+                          </li>
+                          <li>
+                            {/* <Link to="/orders"> */}
+                            <Button
+                              onClick={() => setisOpenDropDown(!isOpenDropDown)}
+                            >
+                              <VerifiedIcon /> Orders
+                            </Button>
+                            {/* </Link> */}
+                          </li>
+                          <li>
+                            {/* <Link to="/myList"> */}
+                            <Button
+                              onClick={() => setisOpenDropDown(!isOpenDropDown)}
+                            >
+                              <FavoriteBorderOutlinedIcon /> My Wishlist
+                            </Button>
+                            {/* </Link> */}
+                          </li>
 
-                            <li>
-                              <Button onClick={logout}>
-                                <LogoutOutlinedIcon /> Sign out
-                              </Button>
-                            </li>
-                          </ul>
-                        )}
-                      </li>
-                    ) : (
-                      <li className="list-inline-item">
-                        <Link to={"/signIn"}>
-                          <Button className="btn btn-g">Sign In</Button>
-                        </Link>
-                      </li>
-                    )}
+                          <li>
+                            <Button>
+                              <LogoutOutlinedIcon /> Sign out
+                            </Button>
+                          </li>
+                        </ul>
+                      )}
+                    </li>
+
+                    {/* <li className="list-inline-item">
+                      <Link to={"/signIn"}>
+                        <Button className="btn btn-g">Sign In</Button>
+                      </Link>
+                    </li> */}
                   </ul>
                 </ClickAwayListener>
               </div>

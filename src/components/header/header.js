@@ -6,15 +6,18 @@ import SearchIcon from "@mui/icons-material/Search";
 import Select from "../selectDrop/select";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
-import ClickAwayListener from "@mui/material/ClickAwayListener";
 import Button from "@mui/material/Button";
 import Person2OutlinedIcon from "@mui/icons-material/Person2Outlined";
 import VerifiedIcon from "@mui/icons-material/Verified";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import axios from "axios";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
+import ClickAwayListener from "@mui/material/ClickAwayListener";
+import SettingsOutlinedIcon from "@mui/icons-material/LogoutOutlined";
+
 // import { MyContext } from "../../App";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
 const Header = () => {
   const [countryData, setCountryData] = useState([]);
@@ -102,16 +105,16 @@ const Header = () => {
             {/* header search start here */}
             <div className="col-sm-5">
               <div className="headerSearch d-flex align-items-center">
-                <div className="selectDrop cursor position-relative">
-                  All Categories
-                  <Select
-                    data={categories}
-                    placeholder={"All Categories"}
-                    icon={false}
-                    selectedSelectBoxItem={selectedSelectBoxItem}
-                    view="category"
-                  />
-                </div>
+                {/* <div className="selectDrop cursor position-relative">
+                  All Categories */}
+                <Select
+                  data={categories}
+                  placeholder={"All Categories"}
+                  icon={false}
+                  selectedSelectBoxItem={selectedSelectBoxItem}
+                  view="category"
+                />
+                {/* </div> */}
                 <div className="search">
                   <input type="text" placeholder="Search for items..." />
                   <SearchIcon className="searchIcon cursor" />
@@ -142,7 +145,7 @@ const Header = () => {
                       <span>
                         <FavoriteBorderOutlinedIcon />
                         <span className="badge bg-success rounded-circle">
-                          {/* {context?.myListData?.length} */}myList
+                          {/* {context?.myListData?.length} */}1
                         </span>
                         Wishlist
                       </span>
@@ -153,7 +156,7 @@ const Header = () => {
                         {/* <Link to={"/cart"}> */}
                         <ShoppingCartOutlinedIcon />
                         <span className="badge bg-success rounded-circle">
-                          {/* {context.cartItems.length} */}cartItems
+                          {/* {context.cartItems.length} */}3
                         </span>
                         Cart
                         {/* </Link> */}

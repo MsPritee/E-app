@@ -74,11 +74,11 @@ const Select = ({ data, placeholder, icon, view, selectedSelectBoxItem }) => {
             <ul className="searchResults">
               <li
                 key={0}
-                onClick={() => closeSelect(0, placeholder, "")}
+                onClick={() => closeSelect(0, placeholder)}
                 className={`${selectedIndex === 0 ? "active" : ""}`}
               >
-                All categories
-                {/* {placeholder} */}
+                {/* All categories */}
+                {placeholder}
               </li>
               {listData.map((item, index) => {
                 return (
@@ -93,7 +93,8 @@ const Select = ({ data, placeholder, icon, view, selectedSelectBoxItem }) => {
                     }
                     className={`${selectedIndex === index + 1 ? "active" : ""}`}
                   >
-                    {view !== "cat" ? item : item?.name}
+                    {/* {view !== "cat" ? item : item?.name} */}
+                    {item}
                   </li>
                 );
               })}

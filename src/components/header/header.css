@@ -90,3 +90,70 @@ header .headerSearch .search .searchIcon {
   font-size: 23px !important;
   color: rgba(0, 0, 0, 0.8);
 }
+
+header .headerTabs {
+  padding-left: 16px;
+}
+header .headerTabs li {
+  position: relative;
+  margin-left: 16px;
+}
+header .headerTabs li span {
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+header .headerTabs li span:hover {
+  text-decoration: none;
+}
+header .headerTabs li span * {
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+header .headerTabs li span a:hover {
+  text-decoration: none;
+}
+header .headerTabs li span svg {
+  margin-right: 10px;
+  width: 22px !important;
+  height: auto !important;
+}
+header .headerTabs li span.badge {
+  width: 20px;
+  height: 20px;
+  color: #fff !important;
+  font-weight: 400;
+  position: absolute;
+  top: -2px;
+  left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px !important;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  width: 200px;
+  height: auto;
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  padding: 10px 0px;
+  z-index: 100;
+}
+.dropdownMenu li {
+  width: 100% !important;
+  list-style: none;
+  margin: 0px !important;
+}
+.dropdownMenu li button {
+  width: 100% !important;
+  text-align: left !important;
+  justify-content: flex-start !important;
+  color: rgba(0, 0, 0, 0.7) !important;
+  text-transform: capitalize !important;
+  font-size: 13px !important;
+  padding: 7px 15px !important;
+}

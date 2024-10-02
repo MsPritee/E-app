@@ -111,3 +111,23 @@ nav .dropdown_menu li button:hover {
   opacity: 1;
   visibility: inherit;
 }
+
+.megaMenu {
+  height: auto !important;
+  padding: 40px 45px !important;
+}
+
+.megaMenu .col ul li {
+  margin-bottom: 0px !important;
+  display: block;
+}
+.megaMenu .col ul li a {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  text-decoration: none;
+}
+.megaMenu .col h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}

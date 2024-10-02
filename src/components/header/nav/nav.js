@@ -10,14 +10,14 @@ const Nav = () => {
   return (
     <div className="nav d-flex align-items-center">
       <div className="container-fluid ">
-        <div className="row">
+        <div className="row position-relative">
           <div className="col-sm-3 part1 d-flex align-items-center">
             <Button className="bg-g text-white catTab">
               <GridView /> &nbsp; Browse All Categories <KeyboardArrowDown />
             </Button>
           </div>
 
-          <div className="col-sm-7 part2">
+          <div className="col-sm-7 part2 position-static">
             <nav>
               <ul className="list list-inline-item list-inline mb-0">
                 <li className="list-inline-item">
@@ -40,12 +40,91 @@ const Nav = () => {
                     <Link>Vendors</Link>
                   </Button>
                 </li>
-                <li className="list-inline-item">
+                <li className="list-inline-item position-static">
                   <Button>
                     <Link>
                       Mega Menu <KeyboardArrowDown />
                     </Link>
                   </Button>
+                  <div className="dropdown_menu megaMenu w-100">
+                    <div className="row">
+                      <div className="col">
+                        <h4 className="text-g">Fruits & Vegitables</h4>
+                        <ul>
+                          <li>
+                            <Link to="">Fresh Fruits</Link>
+                          </li>
+                          <li>
+                            <Link to="">Fresh Vegitables</Link>
+                          </li>
+                          <li>
+                            <Link to="">Fresh Herbs</Link>
+                          </li>
+                          <li>
+                            <Link to="">Exotic Fruits & Veggies</Link>
+                          </li>
+                          <li>
+                            <Link to="">Sprouts</Link>
+                          </li>
+                          <li>
+                            <Link to="">Packaged Produce</Link>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="col">
+                        <h4 className="text-g">Breakfast & Dairy</h4>
+                        <ul>
+                          <li>
+                            <Link to="">Fresh Fruits</Link>
+                          </li>
+                          <li>
+                            <Link to="">Fresh Vegitables</Link>
+                          </li>
+                          <li>
+                            <Link to="">Fresh Herbs</Link>
+                          </li>
+                          <li>
+                            <Link to="">Exotic Fruits & Veggies</Link>
+                          </li>
+                          <li>
+                            <Link to="">Sprouts</Link>
+                          </li>
+                          <li>
+                            <Link to="">Packaged Produce</Link>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="col">
+                        <h4 className="text-g">Cloths & Beauty</h4>
+                        <ul>
+                          <li>
+                            <Link to="">Fresh Fruits</Link>
+                          </li>
+                          <li>
+                            <Link to="">Fresh Vegitables</Link>
+                          </li>
+                          <li>
+                            <Link to="">Fresh Herbs</Link>
+                          </li>
+                          <li>
+                            <Link to="">Exotic Fruits & Veggies</Link>
+                          </li>
+                          <li>
+                            <Link to="">Sprouts</Link>
+                          </li>
+                          <li>
+                            <Link to="">Packaged Produce</Link>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="col">
+                        <img
+                          src="https://wp.alithemes.com/html/nest/demo/assets/imgs/banner/banner-menu.png"
+                          className="w-100"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </li>
                 <li className="list-inline-item">
                   <Button>

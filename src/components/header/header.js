@@ -50,18 +50,18 @@ const Header = () => {
 
   const countryList = [];
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      let position = window.pageYOffset;
-      if (position > 100) {
-        headerRef.current.classList.add("fixed");
-      } else {
-        headerRef.current.classList.remove("fixed");
-      }
-    });
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     let position = window.pageYOffset;
+  //     if (position > 100) {
+  //       headerRef.current.classList.add("fixed");
+  //     } else {
+  //       headerRef.current.classList.remove("fixed");
+  //     }
+  //   });
 
-    getCountry("https://countriesnow.space/api/v0.1/countries/");
-  }, []);
+  //   getCountry("https://countriesnow.space/api/v0.1/countries/");
+  // }, []);
 
   // useEffect(() => {
   //   setCategories(context.categories);

@@ -5,7 +5,9 @@ import CatSlider from "../../components/catSlider";
 const Home = () => {
   return (
     <>
-      <HomeSlider /> <CatSlider />
+      <HomeSlider />
+
+      <CatSlider />
     </>
   );
 };

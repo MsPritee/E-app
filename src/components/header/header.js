@@ -13,6 +13,7 @@ import axios from "axios";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import SettingsOutlinedIcon from "@mui/icons-material/LogoutOutlined";
+import Nav from "./nav/nav";
 
 // import { MyContext } from "../../App";
 // import { useNavigate } from "react-router-dom";
@@ -221,6 +222,7 @@ const Header = () => {
           </div>
         </div>
       </header>
+      <Nav />
     </>
   );
 };

@@ -157,3 +157,14 @@ header .headerTabs li span.badge {
   font-size: 13px !important;
   padding: 7px 15px !important;
 }
+
+.dropdownMenu li button:hover{
+  background:#f1f1f1 !important;
+}
+
+.countryWrapper .selectDropWrapper{width: 200px !important; height: 45px;  padding-left: 10px; display: flex; align-items: center;      border: 1px solid rgba(0,0,0,0.1);}
+ .countryWrapper .selectDropWrapper .openSelect{width: 100%; font-weight: 600;}
+ .countryWrapper .selectDropWrapper .selectDrop{left:0px !important;}
+ .countryWrapper  .openSelect{color:#279a65 !important ;}
+
+ 

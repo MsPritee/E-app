@@ -1,29 +1,113 @@
-.nav{width: 100%; height: 60px; margin: auto; border-top: 1px solid rgba(0,0,0,0.1); border-bottom: 1px solid rgba(0,0,0,0.1);}
+.nav {
+  width: 100%;
+  height: 60px;
+  margin: auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
 
+.nav .part1 {
+  max-width: 20%;
+  flex: 0 0 20%;
+}
+.nav .part2 {
+  max-width: 63%;
+  flex: 0 0 63%;
+}
+.nav .part3 {
+  max-width: 17%;
+  flex: 0 0 17%;
+}
 
-.nav .part1{max-width: 20%; flex: 0 0 20%;}
-.nav .part2{max-width: 63%; flex: 0 0 63%;}
-.nav .part3{max-width: 17%; flex: 0 0 17%;}
+.nav .catTab {
+  padding: 6px 15px !important;
+  font-size: 12px !important;
+  text-transform: capitalize !important;
+}
+.nav .catTab svg {
+  font-size: 15px !important;
+}
 
-.nav .catTab{padding: 6px 15px !important; font-size: 12px !important; text-transform: capitalize !important;}
-.nav .catTab svg{font-size: 15px !important;}
+.nav nav ul li {
+  position: relative;
+  margin-right: 0px !important;
+}
+.nav nav ul li button {
+  text-transform: capitalize !important;
+  padding: 0px !important;
+  color: #3bb77e !important;
+  border-radius: 0px !important;
+}
+.nav nav ul li button a {
+  text-decoration: none !important;
+  color: rgba(0, 0, 0, 0.9) !important;
+  font-size: 14px;
+  padding: 16px 15px !important;
+  width: 100% !important;
+}
+.nav nav ul li button svg {
+  font-size: 18px !important;
+  color: rgba(0, 0, 0, 0.8) !important;
+}
 
-.nav nav ul li{position: relative; margin-right: 0px !important;}
-.nav nav ul li button{text-transform: capitalize !important; padding: 0px !important; color: #3bb77e !important; border-radius: 0px !important; }
-.nav nav ul li button a{text-decoration: none !important; color: rgba(0,0,0,0.9) !important;  font-size: 14px;  padding: 16px 15px !important; width: 100% !important;}
-.nav nav ul li button svg{font-size: 18px !important; color: rgba(0,0,0,0.8) !important;}
+.nav .part3 .phNo svg {
+  font-size: 30px !important;
+  color: rgba(0, 0, 0, 0.8);
+}
+.nav .part3 .phNo h3 {
+  font-size: 16px !important;
+  line-height: 22px !important;
+  font-weight: 600;
+}
+.nav .part3 .phNo p {
+  font-size: 13px !important;
+  color: rgba(0, 0, 0, 0.8);
+}
 
-.nav .part3 .phNo svg{ font-size: 30px !important; color: rgba(0,0,0,0.8);}
-.nav .part3 .phNo h3{ font-size:16px !important; line-height: 22px !important; font-weight: 600;}
-.nav .part3 .phNo p{ font-size: 13px !important; color: rgba(0,0,0,0.8);}
+.nav nav .dropdown_menu {
+  position: absolute;
+  top: 170%;
+  left: 0px;
+  width: 200px;
+  height: auto;
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  padding: 10px 0px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+}
+nav .dropdown_menu li {
+  width: 100% !important;
+  list-style: none;
+  margin: 0px !important;
+}
+.nav nav .dropdown_menu li button {
+  width: 100% !important;
+  text-align: left !important;
+  justify-content: flex-start !important;
+  text-transform: capitalize !important;
+  font-size: 13px !important;
+  padding: 6px 18px !important;
+  color: #3bb77e !important;
+}
 
-.nav nav .dropdown_menu{position: absolute; top: 170%; left: 0px; width:200px; height: auto;  background: #fff;  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); padding: 10px 0px; z-index: 100; opacity: 0; visibility: hidden; transition: all 0.2s ease-in-out;}
-nav .dropdown_menu li{width: 100% !important; list-style: none; margin: 0px !important;}
-.nav nav .dropdown_menu li button{width: 100% !important; text-align: left !important; justify-content: flex-start !important;  text-transform: capitalize !important; font-size: 13px !important; padding: 6px 18px !important; color: #3bb77e !important;}
+.nav nav .dropdown_menu li button a {
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  display: block;
+  width: 100%;
+  padding: 0px !important;
+  color: rgba(0, 0, 0, 0.8) !important;
+}
 
-.nav nav .dropdown_menu li button a{font-weight: 500 !important; font-size: 13px !important;
-display: block; width: 100%; padding: 0px !important; color: rgba(0,0,0,0.8) !important;}
+nav .dropdown_menu li button:hover {
+  background: #f1f1f1 !important;
+}
 
-nav .dropdown_menu li button:hover{background: #f1f1f1 !important;}
-
-.nav nav li:hover .dropdown_menu {top: 102%; opacity: 1; visibility: inherit;}
+.nav nav li:hover .dropdown_menu {
+  top: 102%;
+  opacity: 1;
+  visibility: inherit;
+}

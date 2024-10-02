@@ -28,7 +28,7 @@ const CatSlider = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 10,
+    slidesToShow: 8,
     slidesToScroll: 1,
     fade: false,
     arrows: true,
@@ -46,7 +46,7 @@ const CatSlider = () => {
                   <div className="item">
                     <div className="info" style={{ background: item }}>
                       <img src="https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/cat-13.png" />
-                      <h5>Cake & Milk</h5>
+                      <h6>Cake & Milk</h6>
                       <p>26 items</p>
                     </div>
                   </div>

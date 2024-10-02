@@ -5,6 +5,8 @@ import Slide1 from "../../../assets/images/banner1.jpg";
 import Slide2 from "../../../assets/images/banner2.jpg";
 import Slide3 from "../../../assets/images/banner3.jpg";
 import Slide4 from "../../../assets/images/banner4.jpg";
+import { Button } from "@mui/material";
+import { SendOutlined } from "@mui/icons-material";
 
 const HomeSlider = () => {
   var settings = {
@@ -16,8 +18,8 @@ const HomeSlider = () => {
   };
 
   return (
-    <section className="homeSlider">
-      <div className="container-fluid">
+    <section className="homeSlider position-relative">
+      <div className="container-fluid  ">
         <Slider {...settings} className="home_slider_Main">
           <div className="item">
             <img src={Slide1} className="w-100" />
@@ -39,7 +41,9 @@ const HomeSlider = () => {
           </div>
         </Slider>
         <div className="newsLetterBanner">
-          <input type="text" />
+          <SendOutlined />
+          <input type="text" placeholder="Your email address" />
+          <Button className="bg-g">Subscribe</Button>
         </div>
       </div>
     </section>

@@ -8,6 +8,10 @@ body {
   font-family: 'Roboto', 'sans-serif';
 }
 
+/* #root{
+  zoom: 70%;
+} */
+
 .container-fluid {
   padding: 0px 45px;
 }

@@ -10,7 +10,7 @@ const Nav = () => {
     <div className="nav d-flex align-items-center">
       <div className="container-fluid ">
         <div className="row">
-          <div className="col-sm-3 part1">
+          <div className="col-sm-3 part1 d-flex align-items-center">
             <Button className="bg-g text-white catTab">
               <GridView /> &nbsp; Browse All Categories <KeyboardArrowDown />
             </Button>
@@ -18,7 +18,7 @@ const Nav = () => {
 
           <div className="col-sm-7 part2">
             <nav>
-              <ul className="list list-inline mb-0">
+              <ul className="list list-inline-item list-inline mb-0">
                 <li className="list-inline-item">
                   <Button>
                     <Link>Home</Link>
@@ -41,7 +41,9 @@ const Nav = () => {
                 </li>
                 <li className="list-inline-item">
                   <Button>
-                    <Link>Mega Menu</Link>
+                    <Link>
+                      Mega Menu <KeyboardArrowDown />
+                    </Link>
                   </Button>
                 </li>
                 <li className="list-inline-item">
@@ -51,7 +53,9 @@ const Nav = () => {
                 </li>
                 <li className="list-inline-item">
                   <Button>
-                    <Link>Pages</Link>
+                    <Link>
+                      Pages <KeyboardArrowDown />
+                    </Link>
                   </Button>
                 </li>
                 <li className="list-inline-item">
@@ -63,7 +67,7 @@ const Nav = () => {
             </nav>
           </div>
 
-          <div className="col-sm-2 part3"></div>
+          <div className="col-sm-2 part3 d-flex align-items-center"></div>
         </div>
       </div>
     </div>

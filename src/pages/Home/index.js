@@ -3,6 +3,7 @@ import HomeSlider from "./slider/index";
 import CatSlider from "../../components/catSlider";
 import Banners from "../../components/banners";
 import "./style.css";
+import Product from "../../components/product";
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
         <div className="container-fluid">
           <div className="d-flex align-items-center">
             <h2 className="hd mb-0 mt-0">Popular Product</h2>
-            <ul className="list list-inline ml-auto filterTab">
+            <ul className="list list-inline ml-auto  filterTab">
               <li className="list-inline-item">
                 <a className="cursor">All</a>
               </li>
@@ -33,6 +34,12 @@ const Home = () => {
                 <a className="cursor">Grocery</a>
               </li>
             </ul>
+          </div>
+
+          <div className=" productRow">
+            <div className="item">
+              <Product />
+            </div>
           </div>
         </div>
       </section>

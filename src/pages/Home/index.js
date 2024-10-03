@@ -36,7 +36,19 @@ const Home = () => {
             </ul>
           </div>
 
-          <div className=" productRow">
+          <div className=" row productRow">
+            <div className="item">
+              <Product />
+            </div>
+            <div className="item">
+              <Product />
+            </div>
+            <div className="item">
+              <Product />
+            </div>
+            <div className="item">
+              <Product />
+            </div>
             <div className="item">
               <Product />
             </div>

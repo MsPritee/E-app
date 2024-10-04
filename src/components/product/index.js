@@ -1,16 +1,50 @@
 import React from "react";
 import "./style.css";
-import { Button, Rating } from "@mui/material";
+import { Button, Rating, Tooltip } from "@mui/material";
+import { Link } from "react-router-dom";
+import {
+  CompareArrowsOutlined,
+  FavoriteBorderOutlined,
+  RemoveRedEyeOutlined,
+} from "@mui/icons-material";
 
 const Product = () => {
   return (
     <div className="productThumb">
-      <div className="imgWrapper">
-        <img
-          src="https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-1-2.jpg"
-          className="w-100"
-        />
-      </div>
+      <Link>
+        <div className="imgWrapper">
+          <img
+            src="https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-1-2.jpg"
+            className="w-100"
+          />
+
+          <div className="overlay">
+            <ul className="list list-inline mb-0">
+              <li className="list-inline-item">
+                <Tooltip title="Delete">
+                  <a className="cursor">
+                    <FavoriteBorderOutlined />
+                  </a>
+                </Tooltip>
+              </li>
+              <li className="list-inline-item">
+                <Tooltip title="Delete">
+                  <a className="cursor">
+                    <CompareArrowsOutlined />
+                  </a>
+                </Tooltip>
+              </li>
+              <li className="list-inline-item">
+                <Tooltip title="Delete">
+                  <a className="cursor">
+                    <RemoveRedEyeOutlined />
+                  </a>
+                </Tooltip>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </Link>
       <div className="info">
         <span className="d-block brand">Snack</span>
         <h6 className="title">

@@ -21,25 +21,19 @@ const Product = () => {
           <div className="overlay">
             <ul className="list list-inline mb-0">
               <li className="list-inline-item">
-                <Tooltip title="Delete">
-                  <a className="cursor">
-                    <FavoriteBorderOutlined />
-                  </a>
-                </Tooltip>
+                <a className="cursor" tooltip="Add to Wishlist">
+                  <FavoriteBorderOutlined />
+                </a>
               </li>
               <li className="list-inline-item">
-                <Tooltip title="Delete">
-                  <a className="cursor">
-                    <CompareArrowsOutlined />
-                  </a>
-                </Tooltip>
+                <a className="cursor" tooltip="Compare">
+                  <CompareArrowsOutlined />
+                </a>
               </li>
               <li className="list-inline-item">
-                <Tooltip title="Delete">
-                  <a className="cursor">
-                    <RemoveRedEyeOutlined />
-                  </a>
-                </Tooltip>
+                <a className="cursor" tooltip="Compare">
+                  <RemoveRedEyeOutlined />
+                </a>
               </li>
             </ul>
           </div>

@@ -58,13 +58,13 @@ const Product = (props) => {
         <span className="brand d-block">
           By <a className="text-g">NestFood</a>
         </span>
-      </div>
-      <div className="d-flex align-items-center">
         <div className="d-flex align-items-center">
-          <span className="price">$28.85</span>
-          <span className="oldPrice">$32.85</span>
+          <div className="d-flex align-items-center">
+            <span className="price">$28.85</span>
+            <span className="oldPrice">$32.85</span>
+          </div>
+          <Button className="bg-g">Add</Button>
         </div>
-        <Button className="bg-g">Add</Button>
       </div>
     </div>
   );

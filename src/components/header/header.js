@@ -50,18 +50,18 @@ const Header = () => {
 
   const countryList = [];
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", () => {
-  //     let position = window.pageYOffset;
-  //     if (position > 100) {
-  //       headerRef.current.classList.add("fixed");
-  //     } else {
-  //       headerRef.current.classList.remove("fixed");
-  //     }
-  //   });
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      let position = window.pageYOffset;
+      if (position > 100) {
+        headerRef.current.classList.add("fixed");
+      } else {
+        headerRef.current.classList.remove("fixed");
+      }
+    });
 
-  //   getCountry("https://countriesnow.space/api/v0.1/countries/");
-  // }, []);
+    // getCountry("https://countriesnow.space/api/v0.1/countries/");
+  }, []);
 
   // useEffect(() => {
   //   setCategories(context.categories);
@@ -87,142 +87,154 @@ const Header = () => {
   };
 
   const selectedSelectBoxItem = (name, id) => {
-    if (name === "Your Location") {
-      localStorage.setItem("location", "All");
-    } else {
-      localStorage.setItem("location", name);
-    }
+    // if (name === "Your Location") {
+    //   localStorage.setItem("location", "All");
+    // } else {
+    //   localStorage.setItem("location", name);
+    // }
     window.location.href = window.location.href;
   };
 
   return (
     <>
-      <header>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-sm-2">
-              <img src={Logo} />
-            </div>
-            {/* header search start here */}
-            <div className="col-sm-5">
-              <div className="headerSearch d-flex align-items-center">
-                {/* <div className="selectDrop cursor position-relative">
+      <div className="headerWrapper" ref={headerRef}>
+        <header>
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-sm-2">
+                <img src={Logo} />
+              </div>
+              {/* header search start here */}
+              <div className="col-sm-5">
+                <div className="headerSearch d-flex align-items-center">
+                  {/* <div className="selectDrop cursor position-relative">
                   All Categories */}
-                <Select
-                  data={categories}
-                  placeholder={"All Categories"}
-                  icon={false}
-                  selectedSelectBoxItem={selectedSelectBoxItem}
-                  view="category"
-                />
-                {/* </div> */}
-                <div className="search">
-                  <input type="text" placeholder="Search for items..." />
-                  <SearchIcon className="searchIcon cursor" />
+                  <Select
+                    data={categories}
+                    placeholder={"All Categories"}
+                    icon={false}
+                    selectedSelectBoxItem={selectedSelectBoxItem}
+                    view="category"
+                  />
+                  {/* </div> */}
+                  <div className="search">
+                    <input type="text" placeholder="Search for items..." />
+                    <SearchIcon className="searchIcon cursor" />
+                  </div>
                 </div>
               </div>
-            </div>
-            {/* header search end here */}
+              {/* header search end here */}
 
-            <div className="col-sm-5 d-flex align-items-center part3 res-hide">
-              <div className="ml-auto d-flex align-items-center">
-                <div className="countryWrapper">
-                  {countryData.length !== 0 && (
-                    <Select
-                      data={countryData}
-                      placeholder={"All"}
-                      icon={
-                        <LocationOnOutlinedIcon style={{ opacity: "0.5" }} />
-                      }
-                      view="country"
-                      selectedSelectBoxItem={selectedSelectBoxItem}
-                    />
-                  )}
-                </div>
-                <ClickAwayListener onClickAway={() => setisOpenDropDown(false)}>
-                  <ul className="list list-inline mb-0 headerTabs">
-                    <li className="list-inline-item">
-                      {/* <Link to="/myList"> */}
-                      <span>
-                        <FavoriteBorderOutlinedIcon />
-                        <span className="badge bg-success rounded-circle">
-                          {/* {context?.myListData?.length} */}1
+              <div className="col-sm-5 d-flex align-items-center part3 res-hide">
+                <div className="ml-auto d-flex align-items-center">
+                  <div className="countryWrapper">
+                    {countryData.length !== 0 && (
+                      <Select
+                        data={countryData}
+                        placeholder={"All"}
+                        icon={
+                          <LocationOnOutlinedIcon style={{ opacity: "0.5" }} />
+                        }
+                        view="country"
+                        selectedSelectBoxItem={selectedSelectBoxItem}
+                      />
+                    )}
+                  </div>
+                  <ClickAwayListener
+                    onClickAway={() => setisOpenDropDown(false)}
+                  >
+                    <ul className="list list-inline mb-0 headerTabs">
+                      <li className="list-inline-item">
+                        {/* <Link to="/myList"> */}
+                        <span>
+                          <FavoriteBorderOutlinedIcon />
+                          <span className="badge bg-success rounded-circle">
+                            {/* {context?.myListData?.length} */}1
+                          </span>
+                          Wishlist
                         </span>
-                        Wishlist
-                      </span>
-                      {/* </Link> */}
-                    </li>
-                    <li className="list-inline-item">
-                      <span>
-                        {/* <Link to={"/cart"}> */}
-                        <ShoppingCartOutlinedIcon />
-                        <span className="badge bg-success rounded-circle">
-                          {/* {context.cartItems.length} */}3
-                        </span>
-                        Cart
                         {/* </Link> */}
-                      </span>
-                    </li>
+                      </li>
+                      <li className="list-inline-item">
+                        <span>
+                          {/* <Link to={"/cart"}> */}
+                          <ShoppingCartOutlinedIcon />
+                          <span className="badge bg-success rounded-circle">
+                            {/* {context.cartItems.length} */}3
+                          </span>
+                          Cart
+                          {/* </Link> */}
+                        </span>
+                      </li>
 
-                    <li className="list-inline-item">
-                      <span onClick={() => setisOpenDropDown(!isOpenDropDown)}>
-                        <Person2OutlinedIcon />
-                        Account
-                      </span>
+                      <li className="list-inline-item">
+                        <span
+                          onClick={() => setisOpenDropDown(!isOpenDropDown)}
+                        >
+                          <Person2OutlinedIcon />
+                          Account
+                        </span>
 
-                      {isOpenDropDown !== false && (
-                        <ul className="dropdownMenu">
-                          <li>
-                            {/* <Link to="/my-account"> */}
-                            <Button
-                              className="align-items-center"
-                              onClick={() => setisOpenDropDown(!isOpenDropDown)}
-                            >
-                              <Person2OutlinedIcon /> My Account
-                            </Button>
-                            {/* </Link> */}
-                          </li>
-                          <li>
-                            {/* <Link to="/orders"> */}
-                            <Button
-                              onClick={() => setisOpenDropDown(!isOpenDropDown)}
-                            >
-                              <VerifiedIcon /> Orders
-                            </Button>
-                            {/* </Link> */}
-                          </li>
-                          <li>
-                            {/* <Link to="/myList"> */}
-                            <Button
-                              onClick={() => setisOpenDropDown(!isOpenDropDown)}
-                            >
-                              <FavoriteBorderOutlinedIcon /> My Wishlist
-                            </Button>
-                            {/* </Link> */}
-                          </li>
+                        {isOpenDropDown !== false && (
+                          <ul className="dropdownMenu">
+                            <li>
+                              {/* <Link to="/my-account"> */}
+                              <Button
+                                className="align-items-center"
+                                onClick={() =>
+                                  setisOpenDropDown(!isOpenDropDown)
+                                }
+                              >
+                                <Person2OutlinedIcon /> My Account
+                              </Button>
+                              {/* </Link> */}
+                            </li>
+                            <li>
+                              {/* <Link to="/orders"> */}
+                              <Button
+                                onClick={() =>
+                                  setisOpenDropDown(!isOpenDropDown)
+                                }
+                              >
+                                <VerifiedIcon /> Orders
+                              </Button>
+                              {/* </Link> */}
+                            </li>
+                            <li>
+                              {/* <Link to="/myList"> */}
+                              <Button
+                                onClick={() =>
+                                  setisOpenDropDown(!isOpenDropDown)
+                                }
+                              >
+                                <FavoriteBorderOutlinedIcon /> My Wishlist
+                              </Button>
+                              {/* </Link> */}
+                            </li>
 
-                          <li>
-                            <Button>
-                              <LogoutOutlinedIcon /> Sign out
-                            </Button>
-                          </li>
-                        </ul>
-                      )}
-                    </li>
+                            <li>
+                              <Button>
+                                <LogoutOutlinedIcon /> Sign out
+                              </Button>
+                            </li>
+                          </ul>
+                        )}
+                      </li>
 
-                    {/* <li className="list-inline-item">
+                      {/* <li className="list-inline-item">
                       <Link to={"/signIn"}>
                         <Button className="btn btn-g">Sign In</Button>
                       </Link>
                     </li> */}
-                  </ul>
-                </ClickAwayListener>
+                    </ul>
+                  </ClickAwayListener>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </header>
-      <Nav />
+        </header>
+        <Nav />
+      </div>
     </>
   );
 };

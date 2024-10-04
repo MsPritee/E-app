@@ -5,6 +5,14 @@ header {
   padding: 10px 0px;
 }
 
+.headerWrapper .fixed {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 2000;
+}
+
 header .part1 .logo {
   width: 150px;
   height: auto !important;
@@ -17,11 +25,11 @@ header img{
 .headerWrapper {
   transition: all 0.3s ease-in-out;
   background: #fff;
-  position: fixed;
+  position: sticky;
   top: 0px;
   left: 0px;
   width: 100%;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 .headerWrapper.fixed {

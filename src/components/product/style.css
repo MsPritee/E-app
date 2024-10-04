@@ -51,10 +51,10 @@
   overflow: hidden;
   position: relative;
 }
-.productThumb .imgWrapper .wrapper {
+/* .productThumb .imgWrapper .wrapper {
   height: 100%;
   overflow: hidden;
-}
+} */
 .productThumb .imgWrapper .wrapper .MuiSkeleton-root {
   width: 100% !important;
   height: 100% !important;
@@ -83,12 +83,39 @@
   align-items: center;
   justify-content: center;
   opacity: 0;
-  background: rgba(0, 0, 0, 0.3) !important;
+  transform: scale(0.8);
+  /* background: rgba(0, 0, 0, 0.3) !important; */
 }
 
 .productThumb:hover .imgWrapper .overlay {
   opacity: 1;
   transform: scale(1);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.productThumb .imgWrapper .overlay ul{
+  background: #fff; width: 140px;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid #bce3c9;
+}
+
+.productThumb .imgWrapper .overlay ul li{
+  margin-right: 0px !important;
+}
+
+.productThumb .imgWrapper .overlay ul li a{
+  display: block;
+  padding: 10px;
+  border-right: 1px solid #bce3c9;
+}
+
+.productThumb .imgWrapper .overlay ul li a svg{
+  color: #3bb77e !important;
+}
+
+.productThumb .imgWrapper .overlay ul li a:hover svg{
+  color: #000 !important;
 }
 
 ul.actions {

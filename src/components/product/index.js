@@ -12,17 +12,17 @@ const Product = (props) => {
   return (
     <div className="productThumb">
       {props.tag !== null && props.tag !== undefined && (
-        <span className={`badge ${props.tag}`}>Hot</span>
+        <span className={`badge ${props.tag}`}>{props.tag}</span>
       )}
 
       <Link>
         <div className="imgWrapper">
           <img
-            src="https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-1-2.jpg"
+            src="https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-2-1.jpg"
             className="w-100"
           />
 
-          <div className="overlay">
+          <div className="overlay transition">
             <ul className="list list-inline mb-0">
               <li className="list-inline-item">
                 <a className="cursor" tooltip="Add to Wishlist">

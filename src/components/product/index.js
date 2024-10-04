@@ -8,9 +8,13 @@ import {
   RemoveRedEyeOutlined,
 } from "@mui/icons-material";
 
-const Product = () => {
+const Product = (props) => {
   return (
     <div className="productThumb">
+      {props.tag !== null && props.tag !== undefined && (
+        <span className={`badge ${props.tag}`}>Hot</span>
+      )}
+
       <Link>
         <div className="imgWrapper">
           <img
@@ -31,7 +35,7 @@ const Product = () => {
                 </a>
               </li>
               <li className="list-inline-item">
-                <a className="cursor" tooltip="Compare">
+                <a className="cursor" tooltip="Quick a View">
                   <RemoveRedEyeOutlined />
                 </a>
               </li>

@@ -7,6 +7,7 @@ import Slide3 from "../../../assets/images/banner3.jpg";
 import Slide4 from "../../../assets/images/banner4.jpg";
 import { Button } from "@mui/material";
 import { SendOutlined } from "@mui/icons-material";
+import NewsLetter from "../../../components/newsLetter/newsLetter";
 
 const HomeSlider = () => {
   var settings = {
@@ -40,11 +41,7 @@ const HomeSlider = () => {
             <img src={Slide4} className="w-100" />
           </div>
         </Slider>
-        <div className="newsLetterBanner">
-          <SendOutlined />
-          <input type="text" placeholder="Your email address" />
-          <Button className="bg-g">Subscribe</Button>
-        </div>
+        <NewsLetter />
       </div>
     </section>
   );

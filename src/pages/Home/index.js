@@ -135,19 +135,16 @@ const Home = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col">
-              <TopProduct />
-              {/* <h3>Top Selling</h3> */}
+              <TopProduct title="Top Selling" />
             </div>
             <div className="col">
-              <TopProduct />
+              <TopProduct title="Trending Products" />
             </div>
             <div className="col">
-              <TopProduct />
-              {/* <h3>Recently Added</h3> */}
+              <TopProduct title="Recently Added" />
             </div>
             <div className="col">
-              <TopProduct />
-              {/* <h3>Top Rated</h3> */}
+              <TopProduct title="Top Rated" />
             </div>
           </div>
         </div>

@@ -90,7 +90,7 @@
 .productThumb:hover .imgWrapper .overlay {
   opacity: 1;
   transform: scale(1);
-  background-color: rgba(255, 255, 255, 0.5);
+  /* background-color: rgba(255, 255, 255, 0.5); */
 }
 
 .productThumb .imgWrapper .overlay ul{
@@ -126,7 +126,7 @@ ul.actions {
   position: absolute;
   top: 45%;
   left: 30%;
-  z-index: 1000;
+  z-index: 1005;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
@@ -207,4 +207,5 @@ ul.actions li:last-child a {
 
 .productThumb .oldPrice {
   font-size: 13px !important;
+
 }

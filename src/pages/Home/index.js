@@ -4,16 +4,21 @@ import HomeSlider from "./slider/index";
 import CatSlider from "../../components/catSlider";
 import Banners from "../../components/banners";
 import "./style.css";
+import topProduct from "./TopProduct/topProduct";
 import Product from "../../components/product";
-import Banner4 from "../../assets/images/b4.jpg";
+import Banner4 from "../../assets/images/45555.jpg";
+import TopProduct from "./TopProduct/topProduct";
 
 const Home = () => {
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    fade: false,
+    arrows: true,
+    // autoplay: 3000,
   };
   return (
     <>
@@ -95,19 +100,54 @@ const Home = () => {
           </div>
 
           <div className="row">
-            <div className="col-md-3">
+            <div className="col-md-3 pr-5">
               <img src={Banner4} className="w-100" />
             </div>
             <div className="col-md-9">
-              <Slider {...settings} className="home_slider_Main">
-                <Product tag='sale'/>
-                <Product tag='sale'/>
-                <Product tag='sale'/>
-                <Product tag='sale'/>
-                <Product tag='sale'/>
-                <Product tag='sale'/>
-                <Product tag='sale'/>
+              <Slider {...settings} className="prodSlider">
+                <div className="item">
+                  <Product tag="sale" />
+                </div>
+                <div className="item">
+                  <Product tag="sale" />
+                </div>
+                <div className="item">
+                  <Product tag="sale" />
+                </div>
+                <div className="item">
+                  <Product tag="sale" />
+                </div>
+                <div className="item">
+                  <Product tag="sale" />
+                </div>
+                <div className="item">
+                  <Product tag="sale" />
+                </div>
+                <div className="item">
+                  <Product tag="sale" />
+                </div>
               </Slider>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="topProductsSection">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col">
+              <TopProduct />
+              {/* <h3>Top Selling</h3> */}
+            </div>
+            <div className="col">
+              <TopProduct />
+            </div>
+            <div className="col">
+              <TopProduct />
+              {/* <h3>Recently Added</h3> */}
+            </div>
+            <div className="col">
+              <TopProduct />
+              {/* <h3>Top Rated</h3> */}
             </div>
           </div>
         </div>

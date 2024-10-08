@@ -38,6 +38,10 @@ body {
     margin-left: auto!important
 }
 
+.pr-5,.px-5 {
+    padding-right: 3rem!important
+}
+
 /* START TOOLTIP STYLES */
 [tooltip] {
     position: relative; /* opinion 1 */

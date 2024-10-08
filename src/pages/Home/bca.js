@@ -3,13 +3,12 @@ import Slider from "react-slick";
 import HomeSlider from "./slider/index";
 import CatSlider from "../../components/catSlider";
 import Banners from "../../components/banners";
-import Banner5 from "../../assets/images/b4.jpg";
+import Banner4 from "../../assets/images/banner4.jpg";
 import "./style.css";
 import topProduct from "./TopProduct/topProduct";
 import Product from "../../components/product";
 import Banner4 from "../../assets/images/45555.jpg";
 import TopProduct from "./TopProduct/topProduct";
-import NewsLetter from "../../components/newsLetter/newsLetter";
 
 const Home = () => {
   var settings = {
@@ -154,14 +153,10 @@ const Home = () => {
       <section className="newsLetterSection">
         <div className="container-fluid">
           <div className="box d-flex">
-            <div className="info">
-              <h4>Staty home & get your daily needs from our shop</h4>
-              <p>Start You'r daily shopping with nest mart</p>
-              <NewsLetter />
-            </div>
+            <div className="info"></div>
 
             <div className="img ">
-              <img src={Banner5} className="w-100" />
+              <img src={Banner4} />
             </div>
           </div>
         </div>

@@ -10,6 +10,7 @@ import Product from "../../components/product";
 import Banner4 from "../../assets/images/45555.jpg";
 import TopProduct from "./TopProduct/topProduct";
 import NewsLetter from "../../components/newsLetter/newsLetter";
+import Footer from "../../components/footer/footer";
 
 const Home = () => {
   var settings = {
@@ -166,6 +167,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Footer />
       <br /> <br /> <br /> <br /> <br /> <br />
     </>
   );

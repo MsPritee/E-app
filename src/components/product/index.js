@@ -3,6 +3,7 @@ import "./style.css";
 import { Button, Rating, Tooltip } from "@mui/material";
 import { Link } from "react-router-dom";
 import {
+  ShoppingCartOutlined,
   CompareArrowsOutlined,
   FavoriteBorderOutlined,
   RemoveRedEyeOutlined,

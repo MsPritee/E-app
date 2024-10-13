@@ -1,0 +1,121 @@
+.breadcrumbWrapper {
+  width: 100%;
+  height: auto;
+  padding: 20px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important ;
+}
+.breadcrumb2 {
+  background: none !important;
+  padding: 0px !important;
+}
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 14px;
+}
+ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #3bb77e;
+  text-decoration: none !important;
+}
+ul.breadcrumb li a:hover {
+  color: #3bb77e;
+  text-decoration: underline;
+}
+
+.detailsContainer {
+  max-width: 85% !important;
+  margin: auto;
+  padding: 60px 0px;
+}
+
+.detailsPage .productInfo {
+  padding-left: 80px;
+}
+.detailsPage .productInfo h1 {
+  font-size: 30px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+.detailsPage .productInfo .priceSec .priceLarge {
+  font-size: 28px;
+  font-weight: bold;
+}
+.detailsPage .productInfo .priceSec .text-org {
+  font-size: 18px;
+  font-weight: 600;
+}
+.detailsPage .productInfo .priceSec .text-light.oldPrice {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.detailsPage .productInfo .MuiRating-root {
+  font-size: 18px !important;
+}
+
+.reviewTxt {
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.productZoom {
+  width: 100%;
+  height: 70vh;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.zoomSliderBig {
+  width: 100% !important;
+}
+
+.slick-arrow {
+  background: #fff;
+}
+.zoomSlider {
+  padding-top: 30px;
+}
+.zoomSlider .slick-slide {
+  padding-right: 10px !important;
+}
+.zoomSlider * {
+  outline: none !important;
+}
+.zoomSlider .item {
+  border: 2px solid #e4e4e4 !important;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 3px;
+  height: 80px;
+}
+.zoomSlider .item img {
+  height: 100% !important;
+  object-fit: cover !important;
+}
+.zoomSlider .slick-current .item {
+  border: 2px solid #3bb77e !important;
+}
+.zoomSlider .slick-arrow {
+  top: 55% !important;
+  zoom: 80% !important;
+}
+.zoomSlider .slick-arrow.slick-next {
+  right: -2% !important;
+}
+.zoomSlider .slick-arrow.slick-prev {
+  left: -5% !important;
+}

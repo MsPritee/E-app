@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Listing from "./pages/Listing/listing";
 import Footer from "./components/footer/footer";
 import NotFound from "./pages/NotFound/notFound";
+import DetailsPage from "./pages/Details/Detail";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact={true} path="/" element={<Home />} />
         <Route exact={true} path="/listing" element={<Listing />} />
         <Route exact={true} path="*" element={<NotFound />} />
+        <Route exact={true} path="/product/details" element={<DetailsPage />} />
         {/* <Route exact={true} path="/about" element={<About />} /> */}
       </Routes>
       <Footer />

@@ -60,6 +60,19 @@ body {
   text-decoration: line-through;
 }
 
+.mr-2,.mx-2 {
+    margin-right: .5rem!important
+}
+
+
+.mb-0,.my-0 {
+    margin-bottom: 0!important
+}
+
+.ml-3,.mx-3 {
+    margin-left: 1rem!important
+}
+
 /* START TOOLTIP STYLES */
 [tooltip] {
   position: relative; /* opinion 1 */

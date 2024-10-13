@@ -23,7 +23,6 @@
   transition: all 0.2s ease-in-out;
   width: 40px;
 }
-
 .footerWrapper .footerBoxes .box .info h4 {
   font-size: 15px;
   font-weight: 600;
@@ -35,6 +34,21 @@
 }
 .footerWrapper .footerBoxes .box:hover img {
   transform: translateY(-5px);
+}
+
+footer p,
+footer a {
+  font-size: 14px;
+}
+
+footer {
+  padding: 40px 0px;
+  padding-bottom: 0px;
+}
+
+footer .part1 img {
+  width: 150px !important;
+  height: auto !important;
 }
 
 footer .part1 svg {

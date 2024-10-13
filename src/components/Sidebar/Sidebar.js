@@ -1,6 +1,7 @@
 import { FilterAltOutlined } from "@mui/icons-material";
 import { Button, Checkbox, Slider } from "@mui/material";
 import React from "react";
+import bannerImg from "../../assets/images/b4.jpg";
 
 function valuetext(value) {
   return `${value}°C`;
@@ -158,6 +159,8 @@ const Sidebar = () => {
             </Button>
           </div>
         </div>
+
+        <img src={bannerImg} className="w-100" />
       </div>
     </>
   );

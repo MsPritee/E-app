@@ -21,9 +21,9 @@ const Product = (props) => {
             src="https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-2-1.jpg"
             className="w-100"
           />
-
+          {/* <div className="wrapper mb-3"></div> */}
           <div className="overlay transition">
-            <ul className="list list-inline mb-0">
+            <ul className=" list list-inline ">
               <li className="list-inline-item">
                 <a className="cursor" tooltip="Add to Wishlist">
                   <FavoriteBorderOutlined />

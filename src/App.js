@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Header from "./components/header/header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";

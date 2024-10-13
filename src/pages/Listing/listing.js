@@ -25,7 +25,7 @@ const Listing = () => {
             <div className="sidebarWrapper col-md-3">
               <Sidebar />
             </div>
-            <div className="col-md-9"></div>
+            <div className="col-md-9 rightContent"></div>
           </div>
         </div>
       </div>

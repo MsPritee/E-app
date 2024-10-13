@@ -22,6 +22,20 @@ body {
   cursor: pointer;
 }
 
+.btn-g {
+  background: #35ac75 !important;
+  padding: 7px 21px !important;
+  border-radius: 5px !important;
+  color: #fff !important;
+  text-transform: capitalize !important;
+  font-size: 12px !important;
+}
+
+.btn-g:hover,
+button.bg-g:hover {
+  background: #fdc040 !important;
+}
+
 .bg-g,
 .bg-sucess {
   background: #3bb77e !important;
@@ -106,6 +120,10 @@ body {
   font-size: 15px;
 }
 
+.sidebarWrapper {
+  max-width: 20%;
+}
+
 .sidebarWrapper h3 {
   font-size: 30px;
   font-weight: 600;
@@ -161,7 +179,7 @@ body {
 }
 .sidebarWrapper .sidebar .card .catList .catItem h4 {
   color: #000 !important;
-  font-size: 14px;
+  font-size: 12px;
 }
 .sidebarWrapper .sidebar .card .catList .catItem .rounded-circle {
   background: #bce3c9;
@@ -169,12 +187,58 @@ body {
   height: 27px;
   font-size: 12px;
 }
+
 .sidebarWrapper .sidebar .card .catList .catItem:hover {
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .sidebarWrapper .sidebar .card .catList .catItem .img img {
   width: 22px !important;
+}
+
+.rightContent {
+  max-width: 80%;
+}
+
+.priceRange span {
+  font-size: 13px;
+}
+
+.filters {
+  padding: 25px 0px;
+}
+.filters h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.filters ul {
+  max-height: 200px;
+  overflow-y: scroll;
+  margin-left: -10px;
+}
+.filters ul::-webkit-scrollbar {
+  width: 10px !important;
+}
+.filters ul::-webkit-scrollbar-thumb {
+  background: #ccc !important;
+}
+.filters ul li {
+  width: 100%;
+  margin-bottom: 0px;
+  list-style: none;
+}
+
+.MuiRadio-root svg {
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.filterWrapper {
+  display: none !important;
+}
+.sidebarWrapper .sidebar .btn {
+  width: 100% !important;
 }
 
 /* START TOOLTIP STYLES */
